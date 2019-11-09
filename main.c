@@ -27,3 +27,21 @@ ArvNo* abb_busca (Arv* a, int v)
 {
     return busca(a->raiz, v);
 }
+
+static ArvNo* insere (ArvNo* r, int v)
+{
+    if (r == NULL) {
+        r = (ArvNo*)malloc(sizeof(ArvNo));
+        r->info = v;
+        r->esq = r->dir = NULL;
+    }
+    else if (v < r->info)
+        r->esq = insere(r->esq, v);
+    else    /* v < r->info */
+        r->dir = insere(r->dir, v);
+    return r;
+}
+void abb_insere (Arv* a, int v)
+{
+    a->raiz = insere(a->raiz, v);
+}
