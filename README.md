@@ -8,3 +8,6 @@ Arvore Binária com base no livro Introdução a Estruturas de Dados com Técnic
 
 ## Editora
 * Elsevier.
+
+## IDE usada
+* CLion: https://www.jetbrains.com/clion/
